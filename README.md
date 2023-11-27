@@ -30,6 +30,34 @@ Dans la capture d'écran suivante, on observe que si le solde du propriétaire e
 
 ![Image 2](screenshot/image_2.png)
 
+### BettingContract.sol
+
+Le contrat "BettingContract" permet aux utilisateurs de placer des paris sur deux équipes (TeamA ou TeamB, désignées par 0 ou 1) avant une date limite. Le propriétaire du contrat peut annoncer l'équipe gagnante après la date limite. Les joueurs ayant parié sur l'équipe gagnante peuvent réclamer leur prix, calculé en fonction du montant total misé sur l'équipe gagnante. 
+
+Il faut que la somme pariée soit superieur à la mise minimale (dans le contract déployé ci-dessous, cette mise est de 100 wei)
+
+![image_6](screenshot/image_6.png)
+
+Un même joueur ne peut pas miser qu'une fois. 
+
+![image_7](screenshot/image_7.png)
+
+Le propriétaire du contrat ne peut annoncer l'équipe gagnante qu'après la fermeture des paris, à la date limite.
+
+![image_8](screenshot/image_8.png)
+
+Il n'est pas possible de parié une fois les date limite dépassée.
+
+![image_9](screenshot/image_9.png)
+
+Seuls les joueurs gagnants peuvent retirer leurs gains après l'annonce du résultat.
+
+![image_10](screenshot/image_10.png)
+
+Une adresse n'ayant pas jouée ne peu pas retirer de gain.
+
+![image_11](screenshot/image_11.png)
+
 # Sample Hardhat Project
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
